@@ -1,0 +1,10 @@
+# Code
+gidgethub
+httpx
+jinja2
+trio
+pytokei
+iso8601
+# Development
+black
+isort
