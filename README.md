@@ -29,5 +29,5 @@ Here are some ideas to get you started:
 <a href="https://www.linkedin.com/in/agust%C3%ADn-piqueres-lajar%C3%ADn-6a661810a/?locale=en_US"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> &nbsp;
 
 
-![Agustín Piqueres's GitHub stats](https://github-readme-stats.vercel.app/api?username=plaguss&count_private=true&show_icons=true&theme=tokyonight)
+![Agustín Piqueres' GitHub stats](https://github-readme-stats.vercel.app/api?username=plaguss&count_private=true&show_icons=true&theme=tokyonight)
 
