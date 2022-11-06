@@ -276,7 +276,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
     sorted_values_ = sorted_values[:, 1:]
     sorted_values = sorted_values_.cumsum(axis=1)
     with plt.xkcd():
-        fig, ax = plt.subplots(figsize=(14, 14))
+        fig, ax = plt.subplots(figsize=(15, 15))
         y_pos = np.arange(len(sorted_languages))
         # Insert the figures in inverted order
         # width = 0.15
@@ -295,7 +295,8 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         )
 
         # Adjust layout to make room for the table:
-        plt.subplots_adjust(left=1.5, bottom=1.5)
+        # plt.subplots_adjust(left=1.5, bottom=1.5)
+        plt.subplots_adjust(wspace=0.2, hspace=0.2)
 
         ax.set_xlabel("Number of lines")
         ax.set_yticks(y_pos, labels=sorted_languages)
