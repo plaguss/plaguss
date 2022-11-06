@@ -31,3 +31,10 @@ Here are some ideas to get you started:
 
 ![Agustín Piqueres' GitHub stats](https://github-readme-stats.vercel.app/api?username=plaguss&count_private=true&show_icons=true&theme=tokyonight)
 
+---
+
+### Lines of code 
+
+The following figure show the lines of code obtained with [pytokei](https://github.com/plaguss/pytokei). It is obtained from the public repos, without taking into account forks.
+
+<p><img src="./pytokei_fig.svg"/></p>
