@@ -269,8 +269,6 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
     # The values are sorted according to the number of lines in ascending order
     sorted_idx = np.argsort(values[:, 0])
     # For some reason SVG isn't ignored, remove it here
-    print("Languages found: ", languages)
-    idx_svg = languages.index("SVG")
     sorted_languages = np.take_along_axis(languages, sorted_idx, axis=0)
     # we need the arrays to have the same dimension
     sorted_values = np.take_along_axis(values, sorted_idx[:, np.newaxis], axis=0)
@@ -278,7 +276,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
     sorted_values_ = sorted_values[:, 1:]
     sorted_values = sorted_values_.cumsum(axis=1)
     with plt.xkcd():
-        fig, ax = plt.subplots(figsize=(12, 8))
+        fig, ax = plt.subplots(figsize=(15, 8))
         y_pos = np.arange(len(sorted_languages))
         # Insert the figures in inverted order
         # width = 0.15
