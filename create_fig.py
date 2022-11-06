@@ -295,7 +295,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         )
 
         # Adjust layout to make room for the table:
-        plt.subplots_adjust(left=0.8, bottom=0.8)
+        plt.subplots_adjust(left=1.5, bottom=1.5)
 
         ax.set_xlabel("Number of lines")
         ax.set_yticks(y_pos, labels=sorted_languages)
@@ -305,6 +305,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         ax.set_title(
             f"What languages should you expect\n in my public repos?\n last updated: {dt.date.today().isoformat()}"
         )
+        plt.grid(True)
         plt.tight_layout()
     fig.savefig("pytokei_fig.svg")
 
