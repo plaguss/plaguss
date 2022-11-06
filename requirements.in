@@ -1,11 +1,7 @@
 # Code
 gidgethub
 httpx
-jinja2
 trio
 pytokei
 iso8601
 matplotlib
-# Development
-black
-isort
