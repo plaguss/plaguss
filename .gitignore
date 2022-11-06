@@ -131,4 +131,4 @@ dmypy.json
 draft/
 
 # We don't need the tests to be tracked for this
-test_create_readme.py
+test_create_fig.py
