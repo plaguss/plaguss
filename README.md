@@ -35,6 +35,8 @@ Here are some ideas to get you started:
 
 ### Lines of code 
 
+[![Updated once a week at 01:04](https://github.com/plaguss/plaguss/actions/workflows/fig.yml/badge.svg)](https://github.com/plaguss/plaguss/actions/workflows/fig.yml)
+
 The following figure show the lines of code obtained with [pytokei](https://github.com/plaguss/pytokei). It is obtained from the public repos, without taking into account forks.
 
 <p><img src="./pytokei_fig.svg"/></p>
