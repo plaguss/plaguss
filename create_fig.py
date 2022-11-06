@@ -35,8 +35,6 @@ USERNAME = "plaguss"
 here = pathlib.Path(__file__).parent.resolve()
 dbname = str(here / "checkpoint_db")
 
-conf = dotenv_values(".env")
-
 Header = tuple[str, str, str, str, str, str]
 ReportLine = tuple[str, int, int, int, int, int]
 
@@ -321,6 +319,7 @@ if __name__ == "__main__":
     args = vars(parser.parse_args())
     # To run locally, just grab the token from the env
     # from dotenv import dotenv_values
+    # conf = dotenv_values(".env")
     # token = conf.get("PLAGUSS_TOKEN_README")
     token = args["token"]
     trio.run(main, token, USERNAME)
