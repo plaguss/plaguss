@@ -281,9 +281,10 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         fig, ax = plt.subplots()
         y_pos = np.arange(len(sorted_languages))
         # Insert the figures in inverted order
-        b1 = ax.barh(y_pos, sorted_values[:, 2])
-        b2 = ax.barh(y_pos, sorted_values[:, 1])
-        b3 = ax.barh(y_pos, sorted_values[:, 0])
+        width = 0.15
+        b1 = ax.barh(y_pos, sorted_values[:, 2], height=width, color="xkcd:easter green")
+        b2 = ax.barh(y_pos, sorted_values[:, 1], height=width, color="xkcd:light lavendar")
+        b3 = ax.barh(y_pos, sorted_values[:, 0], height=width, color="xkcd:cornflower")
 
         ax.bar_label(b1, label_type="edge")
         ax.bar_label(b2, label_type="edge")
@@ -291,7 +292,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
 
         ax.set_xlabel("Number of lines")
         ax.set_yticks(y_pos, labels=sorted_languages)
-        ax.legend(headers[-3:], loc="lower right", fontsize="small", bbox_to_anchor=(0, 1))
+        ax.legend(headers[-3:][::-1], loc="lower right", fontsize="small")  # bbox_to_anchor=(0, 1)
         ax.set_title(f"What languages should you expect\n in my public repos?\n last updated: {dt.date.today().isoformat()}")
         plt.tight_layout()
     fig.savefig("pytokei_fig.svg")
