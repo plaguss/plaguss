@@ -24,17 +24,15 @@ import gidgethub.abc
 import gidgethub.httpx
 import httpx
 import iso8601
-import jinja2
+import matplotlib.pyplot as plt
+import numpy as np
 import trio
 from dotenv import dotenv_values
 from pytokei import Config, Languages
-import matplotlib.pyplot as plt
-import numpy as np
 
 USERNAME = "plaguss"
 # This script is expected to run once a week,
 # the timedelta should change otherwise.
-LAST_UPDATE = dt.datetime.today() - dt.timedelta(days=7)
 here = pathlib.Path(__file__).parent.resolve()
 dbname = str(here / "checkpoint_db")
 
@@ -146,7 +144,10 @@ class RepoWalker:
 
     def register(self, repo_report: RepoReport) -> None:
         """Updates the report in the db and sets the date of update."""
-        self.db[repo_report.name] = {"repo_report": repo_report, "last_update": self.current_date}
+        self.db[repo_report.name] = {
+            "repo_report": repo_report,
+            "last_update": self.current_date,
+        }
 
     def get(self, repo_name: str) -> RepoReport:
         """Gets a report from the database or returns a ValueError.
@@ -274,33 +275,26 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
     # we need the arrays to have the same dimension
     sorted_values = np.take_along_axis(values, sorted_idx[:, np.newaxis], axis=0)
     # use the cumulated sum to avoid overlapping on the bars
-    sorted_values = sorted_values[:, 1:].cumsum(axis=1)
-    print("sorted vals", sorted_values)
+    sorted_values_ = sorted_values[:, 1:]
+    sorted_values = sorted_values_.cumsum(axis=1)
     with plt.xkcd():
         fig, ax = plt.subplots()
         y_pos = np.arange(len(sorted_languages))
         # Insert the figures in inverted order
-        ax.barh(y_pos, sorted_values[:, 2])
-        ax.barh(y_pos, sorted_values[:, 1])
-        ax.barh(y_pos, sorted_values[:, 0])
+        b1 = ax.barh(y_pos, sorted_values[:, 2])
+        b2 = ax.barh(y_pos, sorted_values[:, 1])
+        b3 = ax.barh(y_pos, sorted_values[:, 0])
+
+        ax.bar_label(b1, label_type="edge")
+        ax.bar_label(b2, label_type="edge")
+        ax.bar_label(b3, label_type="edge")
+
         ax.set_xlabel("Number of lines")
         ax.set_yticks(y_pos, labels=sorted_languages)
-        ax.legend(ncol=len(headers[-3:]), bbox_to_anchor=(0, 1),
-              loc='lower left', fontsize='small')
+        ax.legend(headers[-3:], loc="lower right", fontsize="small", bbox_to_anchor=(0, 1))
+        ax.set_title(f"What languages should you expect\n in my public repos?\n last updated: {dt.date.today().isoformat()}")
         plt.tight_layout()
     fig.savefig("pytokei_fig.svg")
-
-
-def generate_readme():
-    """The README is generated from a template, but only to
-    update the date, it includes the figure already generated.
-    """
-    with open("TEMPLATE.md", "r", encoding="utf-8") as file:
-        template = jinja2.Template(file.read())
-
-    today = dt.date.today()
-
-    return template.render(today=today.isoformat())
 
 
 async def main(token: str, username: str = USERNAME) -> None:
@@ -317,7 +311,7 @@ async def main(token: str, username: str = USERNAME) -> None:
         # After the RepoWalker has finished, get the RepoReport with the content
 
     generate_figure(repo_walker.repo_report)
-    print(generate_readme())
+    print("Done!")
 
 
 if __name__ == "__main__":
