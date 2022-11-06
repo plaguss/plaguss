@@ -285,18 +285,17 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         b2 = ax.barh(y_pos, sorted_values[:, 1], color=colors[1])
         b3 = ax.barh(y_pos, sorted_values[:, 0], color=colors[2])
 
-        table = plt.table(
-            cellText=sorted_values[::-1],
-            rowLabels=sorted_languages[::-1],
-            # rowColours=colors,
-            cellLoc="center",
-            colLabels=headers[-3:],
-            loc="bottom",
-        )
+        # table = plt.table(
+        #     cellText=sorted_values[::-1],
+        #     rowLabels=sorted_languages[::-1],
+        #     # rowColours=colors,
+        #     cellLoc="center",
+        #     colLabels=headers[-3:],
+        #     loc="bottom",
+        # )
 
-        # Adjust layout to make room for the table:
-        # plt.subplots_adjust(left=1.5, bottom=1.5)
-        plt.subplots_adjust(wspace=0.2, hspace=0.2)
+        # # Adjust layout to make room for the table:
+        # plt.subplots_adjust(wspace=0.2, hspace=0.2)
 
         ax.set_xlabel("Number of lines")
         ax.set_yticks(y_pos, labels=sorted_languages)
@@ -306,7 +305,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         ax.set_title(
             f"What languages should you expect\n in my public repos?\n last updated: {dt.date.today().isoformat()}"
         )
-        plt.grid(True)
+        ax.grid(True, linewidth=1)
         plt.tight_layout()
     fig.savefig("pytokei_fig.svg")
 
