@@ -1,4 +1,4 @@
-name: Daily Update
+name: Updated once a week at 01:04
 on:
   push:
   schedule:
