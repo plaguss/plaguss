@@ -284,7 +284,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         width = 0.15
         b1 = ax.barh(y_pos, sorted_values[:, 2], height=width, color="xkcd:easter green")
         b2 = ax.barh(y_pos, sorted_values[:, 1], height=width, color="xkcd:light lavendar")
-        b3 = ax.barh(y_pos, sorted_values[:, 0], height=width, color="xkcd:cornflower")
+        b3 = ax.barh(y_pos, sorted_values[:, 0], height=width, color="xkcd:soft blue")
 
         ax.bar_label(b1, label_type="edge")
         ax.bar_label(b2, label_type="edge")
@@ -320,6 +320,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="Readme generator")
     parser.add_argument("token")
     args = vars(parser.parse_args())
-
-    token = conf.get("PLAGUSS_TOKEN_README")
+    # To run locally, just grab the token from the env
+    # token = conf.get("PLAGUSS_TOKEN_README")
+    token = args["token"]
     trio.run(main, token, USERNAME)
