@@ -241,7 +241,7 @@ def _parse_projects(projects):
 def grab_loc(project_path: str) -> dict[str, dict[str, int]]:
     """Uses pytokei to obtain the lines of code in a project."""
     langs: Languages = Languages()
-    langs.get_statistics([project_path], ["ignore"], Config())
+    langs.get_statistics([project_path], ["*.json"], Config())
     return langs.report_compact_plain()
 
 
