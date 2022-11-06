@@ -27,7 +27,6 @@ import iso8601
 import matplotlib.pyplot as plt
 import numpy as np
 import trio
-from dotenv import dotenv_values
 from pytokei import Config, Languages
 
 USERNAME = "plaguss"
@@ -321,6 +320,7 @@ if __name__ == "__main__":
     parser.add_argument("token")
     args = vars(parser.parse_args())
     # To run locally, just grab the token from the env
+    # from dotenv import dotenv_values
     # token = conf.get("PLAGUSS_TOKEN_README")
     token = args["token"]
     trio.run(main, token, USERNAME)
