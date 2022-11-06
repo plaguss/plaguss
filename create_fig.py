@@ -280,18 +280,34 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         y_pos = np.arange(len(sorted_languages))
         # Insert the figures in inverted order
         # width = 0.15
-        b1 = ax.barh(y_pos, sorted_values[:, 2], color="xkcd:easter green")
-        b2 = ax.barh(y_pos, sorted_values[:, 1], color="xkcd:light lavendar")
-        b3 = ax.barh(y_pos, sorted_values[:, 0], color="xkcd:soft blue")
+        colors = ["xkcd:easter green", "xkcd:light lavendar", "xkcd:soft blue"]
+        b1 = ax.barh(y_pos, sorted_values[:, 2], color=colors[0])
+        b2 = ax.barh(y_pos, sorted_values[:, 1], color=colors[1])
+        b3 = ax.barh(y_pos, sorted_values[:, 0], color=colors[2])
 
-        ax.bar_label(b1, label_type="center")
-        ax.bar_label(b2, label_type="center")
-        ax.bar_label(b3, label_type="center")
+        # ax.bar_label(b1, label_type="center")
+        # ax.bar_label(b2, label_type="center")
+        # ax.bar_label(b3, label_type="center")
+        # Add a table at the bottom of the axes
+        the_table = plt.table(
+            cellText=sorted_values,
+            rowLabels=sorted_languages,
+            rowColours=colors,
+            colLabels=headers[-3:],
+            loc="bottom",
+        )
+
+        # Adjust layout to make room for the table:
+        plt.subplots_adjust(left=0.2, bottom=0.2)
 
         ax.set_xlabel("Number of lines")
         ax.set_yticks(y_pos, labels=sorted_languages)
-        ax.legend(headers[-3:][::-1], loc="lower right", fontsize="small")  # bbox_to_anchor=(0, 1)
-        ax.set_title(f"What languages should you expect\n in my public repos?\n last updated: {dt.date.today().isoformat()}")
+        ax.legend(
+            headers[-3:][::-1], loc="lower right", fontsize="small"
+        )  # bbox_to_anchor=(0, 1)
+        ax.set_title(
+            f"What languages should you expect\n in my public repos?\n last updated: {dt.date.today().isoformat()}"
+        )
         plt.tight_layout()
     fig.savefig("pytokei_fig.svg")
 
