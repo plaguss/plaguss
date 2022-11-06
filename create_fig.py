@@ -241,7 +241,7 @@ def _parse_projects(projects):
 def grab_loc(project_path: str) -> dict[str, dict[str, int]]:
     """Uses pytokei to obtain the lines of code in a project."""
     langs: Languages = Languages()
-    langs.get_statistics([project_path], ["*.json"], Config())
+    langs.get_statistics([project_path], ["*.json", "*.svg"], Config())
     return langs.report_compact_plain()
 
 
@@ -278,10 +278,10 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         fig, ax = plt.subplots()
         y_pos = np.arange(len(sorted_languages))
         # Insert the figures in inverted order
-        width = 0.15
-        b1 = ax.barh(y_pos, sorted_values[:, 2], height=width, color="xkcd:easter green")
-        b2 = ax.barh(y_pos, sorted_values[:, 1], height=width, color="xkcd:light lavendar")
-        b3 = ax.barh(y_pos, sorted_values[:, 0], height=width, color="xkcd:soft blue")
+        # width = 0.15
+        b1 = ax.barh(y_pos, sorted_values[:, 2], color="xkcd:easter green")
+        b2 = ax.barh(y_pos, sorted_values[:, 1], color="xkcd:light lavendar")
+        b3 = ax.barh(y_pos, sorted_values[:, 0], color="xkcd:soft blue")
 
         ax.bar_label(b1, label_type="edge")
         ax.bar_label(b2, label_type="edge")

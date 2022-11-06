@@ -32,4 +32,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update figure for README.md
-          file_pattern: pytokei_fig.svg checkpoint_db.db
+          file_pattern: pytokei_fig.svg *.db
