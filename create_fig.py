@@ -292,7 +292,7 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
         the_table = plt.table(
             cellText=sorted_values,
             rowLabels=sorted_languages,
-            rowColours=colors,
+            # rowColours=colors,
             colLabels=headers[-3:],
             loc="bottom",
         )
