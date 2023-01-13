@@ -310,6 +310,21 @@ def generate_figure(repo_report: RepoReport, figtype: list[str] = ["lines"]) -> 
     fig.savefig("pytokei_fig.svg")
 
 
+def create_wordcloud(repo_report: RepoReport) -> None:
+    """Creates a wordcloud with the lines of code of the reports. """
+    from wordcloud import WordCloud
+    headers, content = repo_report.as_table()
+    content = np.array(content)
+    languages = content[:, 0]
+    # Get the numbers, but the number of files are removed for the moment,
+    # include from 1: if wanted.
+    values = content[:, 2:].astype(int)
+    text = {lang: lines[0] for lang, lines in zip(languages, values)}
+    wc = WordCloud(width=600, height=400)
+    cloud = wc.fit_words(text)
+    cloud.to_file("pytokei_wcloud.png")
+
+
 async def main(token: str, username: str = USERNAME) -> None:
     """Note for my future self.
     This doesn't need async, initially I thought there would
