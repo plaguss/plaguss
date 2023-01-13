@@ -46,22 +46,17 @@ iso8601==1.1.0
 kiwisolver==1.4.4
     # via matplotlib
 matplotlib==3.6.2
-    # via
-    #   -r requirements.in
-    #   wordcloud
+    # via -r requirements.in
 numpy==1.23.4
     # via
     #   contourpy
     #   matplotlib
-    #   wordcloud
 outcome==1.2.0
     # via trio
 packaging==21.3
     # via matplotlib
 pillow==9.3.0
-    # via
-    #   matplotlib
-    #   wordcloud
+    # via matplotlib
 pycparser==2.21
     # via cffi
 pyjwt[crypto]==2.6.0
@@ -90,5 +85,3 @@ trio==0.22.0
     # via -r requirements.in
 uritemplate==4.1.1
     # via gidgethub
-wordcloud==1.8.2.2
-    # via -r requirements.in
