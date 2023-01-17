@@ -39,4 +39,4 @@ Here are some ideas to get you started:
 
 The following figure show the lines of code obtained with [pytokei](https://github.com/plaguss/pytokei). It is obtained from the public repos, without taking into account forks.
 
-<p><img src="./pytokei_wcloud.png"/></p>
+<p><img src="./pytokei_fig.svg"/></p>
