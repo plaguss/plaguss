@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 
 -->
 
-- 👀 I'm interested in data engineering, data science, machine learning, software engineering...
+- 👀 I'm interested in machine learning engineering, data science, data engineering, software engineering...
 
 - 👯 I’m looking to collaborate on all things ![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&style=flat&logo=python)
 
