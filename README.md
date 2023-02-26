@@ -20,9 +20,9 @@ Here are some ideas to get you started:
 
 - 👀 I'm interested in machine learning engineering, data science, data engineering, software engineering...
 
-- 👯 I’m looking to collaborate on all things ![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&style=flat&logo=python)
+- :computer: Visit my website at [plaguss.github.io](https://plaguss.github.io/)
 
-- 🌱 I’m currently learning ![](https://img.shields.io/badge/Rust-000000?style=for-the-badge&style=flat&logo=rust&logoColor=white)
+- 👯 I’m looking to collaborate on all things ![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&style=flat&logo=python)
 
 - 📫 How to reach me:
 <a href="mailto:agustin.piqueres@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" /></a> &nbsp;
@@ -31,6 +31,7 @@ Here are some ideas to get you started:
 
 ![Agustín Piqueres' GitHub stats](https://github-readme-stats.vercel.app/api?username=plaguss&count_private=true&show_icons=true&theme=tokyonight)
 
+<!-- 
 ---
 
 ### Lines of code 
@@ -40,3 +41,4 @@ Here are some ideas to get you started:
 The following figure show the lines of code obtained with [pytokei](https://github.com/plaguss/pytokei). It is obtained from the public repos, without taking into account forks.
 
 <p><img src="./pytokei_fig.svg"/></p>
+-->
