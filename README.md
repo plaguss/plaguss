@@ -1,4 +1,4 @@
-### 👋 Hi, I'm Agustín Piqueres (friends call me Agus)
+### 👋 Hi there
 
 ---
 
@@ -24,15 +24,18 @@ Here are some ideas to get you started:
 
 -->
 
+I'm Agustín Piqueres (friends call me Agus), I love building things using open source software, machine learning and python.
+
 
 ## Projects
 
 The following table is a summary of some hobby projects, along with the stack used.
-Python won't be added as it is a constant across projects :)
+Python won't be added as it is a constant across projects :).
 
-<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/python/python-original.svg" title="Python" alt="Javascript" width="40" height="40"/>&nbsp;
 
 <div align="center">
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/python/python-original.svg" title="Python" alt="Javascript" width="70" height="70">&nbsp;
 
 
 | Project links   |      Summary      |
@@ -45,19 +48,7 @@ Python won't be added as it is a constant across projects :)
 | [Master thesis](https://github.com/plaguss/tfm-misc/blob/main/slides/slides.md) | (**Spanish only**)    <br/> App to classify CrossFit movement videos using a fine-tuned  <br/> version of [MoViNets](https://github.com/tensorflow/models/blob/master/official/projects/movinet/README.md) on a novel dataset. <br/> App created with *Plotly's Dash*, deployed to AWS, <br/> CI/CD with *CodeDeploy* and *CodePipeline*.  <br/>  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tensorflow/tensorflow-original.svg" title="tensorflow" alt="tensorflow" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/opencv/opencv-original.svg" title="opencv" alt="opencv" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/amazonwebservices/amazonwebservices-original.svg" title="aws" alt="aws" width="40" height="40"/>&nbsp; |
 
 
-<!-- | Project links   |      Summary      |  Stack |
-|:----------:|:-------------:|:------:|
-| [talking-python](https://github.com/plaguss/talking-python) | App to look for *talk python to me* podcasts using *semantic search* on *chroma* vector database with the embeddings over the transcripts. Deployed to *Streamlit cloud*  | <img src="https://www.trychroma.com/chroma-logo.png" title="Chroma" alt="Chroma" width="40" height="35"/>&nbsp; <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" title="huggingface" alt="huggingface" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/docker/docker-original.svg"  title="Docker" alt="Docker" width="40" height="40"/>&nbsp; <br /> <img src="https://d33wubrfki0l68.cloudfront.net/ed3492ea646ab7411b56ba0bf80b445f2187e38f/d266f/assets/img/full_logo_dark.2d098da5.svg" title="Prefect" alt="Prefect" width="90" height="40"/>&nbsp; <img src="https://user-images.githubusercontent.com/7164864/217935870-c0bc60a3-6fc0-4047-b011-7b4c59488c91.png" title="Streamlit" alt="Streamlit" width="40" height="25"/>&nbsp; |
-| [translate-md](https://github.com/plaguss/translate-md) |    centered    |  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" title="huggingface" alt="huggingface" width="40" height="40"/>&nbsp; <img src="https://markdown-it-py.readthedocs.io/en/latest/_static/markdown-it-py.svg" title="Rust" alt="Rust" width="40" height="40"/>&nbsp; |
-| [spanglish](https://github.com/plaguss/spanglish) |    centered   | <img src="https://avatars.githubusercontent.com/u/22125274?s=48&v=4" title="ray" alt="ray" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/fastapi/fastapi-plain.svg" title="Rust" alt="Rust" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/docker/docker-original.svg"  title="Docker" alt="Docker" width="40" height="40"/>&nbsp; |
-| [helpner](https://github.com/plaguss/helpner) |    centered   |   <img src="https://duckduckgo.com/i/81015968.png" title="spaCy" alt="spaCy" width="50" height="20"/>&nbsp; <img src="https://avatars.githubusercontent.com/u/93378883?s=48&v=4" title="spaCy" alt="spaCy" width="40" height="40"/>&nbsp; |
-| [pytokei](https://github.com/plaguss/pytokei) | right-aligned |    <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/rust/rust-plain.svg" title="Rust" alt="Rust" width="40" height="40"/>&nbsp; <img src="https://avatars.githubusercontent.com/u/28156855?s=200&v=4" title="PyO3" alt="PyO3" width="40" height="40"/>&nbsp; |
-| [Master thesis](https://github.com/plaguss/tfm-misc/blob/main/slides/slides.md) | (*Only in Spanish*) |  <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tensorflow/tensorflow-original.svg" title="tensorflow" alt="tensorflow" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/opencv/opencv-original.svg" title="opencv" alt="opencv" width="40" height="40"/>&nbsp; <img src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/amazonwebservices/amazonwebservices-original.svg" title="aws" alt="aws" width="40" height="40"/>&nbsp; | -->
-
-
 </div>
-
----
 
 
 ---
