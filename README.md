@@ -24,7 +24,7 @@ Here are some ideas to get you started:
 
 -->
 
-I'm Agustín Piqueres (friends call me Agus), I love building things using open source software, machine learning and python.
+I'm Agustín Piqueres (my friends call me Agus), I love building things using open source software, machine learning and python.
 
 
 ## Projects
