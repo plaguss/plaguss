@@ -26,6 +26,12 @@ Here are some ideas to get you started:
 
 I'm Agustín Piqueres (my friends call me Agus), I love building things using open source software, machine learning and python.
 
+![Agustín Piqueres' GitHub stats](https://github-readme-stats.vercel.app/api?username=plaguss&count_private=true&show_icons=true&theme=tokyonight)
+
+ 📫 How to reach me:
+<a href="mailto:agustin.piqueres@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" /></a> &nbsp;
+<a href="https://www.linkedin.com/in/agust%C3%ADn-piqueres-lajar%C3%ADn-6a661810a/?locale=en_US"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> &nbsp;
+
 
 ## Projects
 
@@ -50,14 +56,6 @@ Python won't be added as it is a constant across projects :).
 
 </div>
 
-
----
-
-![Agustín Piqueres' GitHub stats](https://github-readme-stats.vercel.app/api?username=plaguss&count_private=true&show_icons=true&theme=tokyonight)
-
- 📫 How to reach me:
-<a href="mailto:agustin.piqueres@gmail.com"><img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white" /></a> &nbsp;
-<a href="https://www.linkedin.com/in/agust%C3%ADn-piqueres-lajar%C3%ADn-6a661810a/?locale=en_US"><img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=flat&logo=linkedin&logoColor=white"/></a> &nbsp;
 
 <!-- ---
 
